@@ -1,9 +1,6 @@
 package io.qameta.junit5;
 
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 
 /**
@@ -15,14 +12,31 @@ public class SimpleTest {
     @Test
     @Feature("Some feature")
     @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("test features of allure")
+    @Description("this is a complex \n multiline text \n with explanations")
     public void testOutput() {
         firstStep();
+      secondStep();
+      attachment();
     }
 
     @Step
     public void firstStep() {
 
     }
+
+  @Step
+  @Attachment
+  public String secondStep() {
+    return "attachment";
+  }
+
+  @Attachment
+  public String attachment() {
+    return "attachment hehe";
+  }
+
+
 
     @Test
     void skippedTest(){
@@ -31,6 +45,6 @@ public class SimpleTest {
 
     @Test
     void failedTest(){
-        Assertions.assertTrue(true);
+      Assertions.assertTrue(false);
     }
 }
