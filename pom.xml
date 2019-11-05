@@ -18,13 +18,13 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.4.2</version>
+            <version>5.5.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
-            <version>2.12.1</version>
+            <version>2.13.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -62,7 +62,7 @@
                 <version>2.10.0</version>
                 <!-- If you don't define report version the plugin will work, but may use the older one.-->
                 <configuration>
-                    <reportVersion>2.12.1</reportVersion>
+                    <reportVersion>2.13.0</reportVersion>
                 </configuration>
             </plugin>
         </plugins>
