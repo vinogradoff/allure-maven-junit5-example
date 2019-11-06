@@ -26,6 +26,11 @@ public class SimpleTest {
 
   }
 
+  @BeforeAll
+  static void init() {
+    System.out.println("@BeforeAll");
+  }
+
   @Step
   @Attachment
   private String secondStep() {
