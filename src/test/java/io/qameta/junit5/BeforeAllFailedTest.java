@@ -14,4 +14,9 @@ public class BeforeAllFailedTest {
   void test() {
 
   }
+
+  @Test
+  void test2() {
+
+  }
 }
